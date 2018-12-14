@@ -1,0 +1,15 @@
+<!--
+<div >
+  <div *ngFor="let task of tasks; let i = index; let odd = odd, let first = first" [ngClass]="{'bold': odd, 'pink': first }" >
+    {{ i + 1 }}.: {{ tasks[i] }} 
+  </div>
+</div>
+-->
+
+<div>
+  <div *ngFor="let task of tasks; let i = index; let odd = odd, let first = first">
+    <div [ngStyle]="{'background-color': getBgColor(i), 'font-weight': getBold(i)}">
+      {{ i + 1 }}.: {{ tasks[i] }}
+    </div>
+  </div>
+</div>
