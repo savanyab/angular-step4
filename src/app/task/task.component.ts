@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 export class TaskComponent implements OnInit {
   @Input() name: string = '';
-  @Output() taskClicked = new EventEmitter<string>();
+  @Output() taskFinished = new EventEmitter<string>();
 
   status: number = 0;
 
@@ -20,7 +20,7 @@ export class TaskComponent implements OnInit {
   onClick() {
     this.status += 10;
     if (this.status === 100) {
-      this.taskClicked.next(this.name);
+      this.taskFinished.next(this.name);
     }
   }
 
