@@ -26,4 +26,8 @@ export class TaskListComponent implements OnInit {
     }
   }
 
+  handleStatus100(name: string) {  
+      alert( name + ": 100-as status elérve" );    
+  }
+
 }
